@@ -1,6 +1,5 @@
-# Para importar las instancias iniciales de los codigos de hashes. El fichero testHashes.txt debe estar en la carpeta raiz, colgando de public 
-# cualquiera@cualquiera-Lenovo-G50-70:~/AppEngine/google_appengine$ ./dev_appserver.py /home/cualquiera/Code3/BitcoinTransparency/BitTranspPrj/public/
-# Ejecutar en http://127.0.0.1:8000/console, Interactive Console.
+#Interactive console
+
 from model import Utxo
 
 f = open('batch/inputs/testUtxoMain.txt', 'r')
