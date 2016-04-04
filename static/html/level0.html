@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="/static/images/favicon.png"/>
+
+    <title>Timestamp your documents for free</title>
+    
+    <!-- http://stackoverflow.com/questions/19364726/issue-making-bootstrap3-icon-spin -->
+    <style>
+    .glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+} 
+    </style>  
+  <link href="/static/stylesheets/bootstrap.css" rel="stylesheet">
+  <link href="/static/stylesheets/level0.css" rel="stylesheet">
+  </head>
+
+ <body class="bgGlob">
+ <noscript>
+  <div>
+<p>JavaScript must be enabled in order for you to use the Docforever app.</p> 
+<p>However, it seems JavaScript is either disabled or not supported by your browser.</p>
+<p>Enable JavaScript by changing your browser options, then <a href="/">try again</a>.</p>
+</div>
+</noscript>
+<div id="firstContainerFluid" class="container-fluid"><div class="row bgMainBar cDfBar" id="idDfBar"><div id="idLeftBar" class="col-xs-13 col-sm-8 col-sm-offset-2 col-md-9 col-md-offset-1 bgMainBar cLeftBar"">
+<svg
+   width="200"
+   height="43"
+   viewBox="0 0 7250 1558"
+   preserveAspectRatio="xMaxYMax"
+   fill="#000000" stroke="#000000" stroke-width="50"
+   id="logo">
+  <path d="M896 512h-384v384h384v-384zm128 640v128h-640v-128h640zm0-768v640h-640v-640h640zm640 768v128h-512v-128h512zm0-256v128h-512v-128h512zm0-256v128h-512v-128h512zm0-256v128h-512v-128h512zm-1536 960v-960h-128v960q0 26 19 45t45 19 45-19 19-45zm1664 0v-1088h-1536v1088q0 33-11 64h1483q26 0 45-19t19-45zm128-1216v1216q0 80-56 136t-136 56h-1664q-80 0-136-56t-56-136v-1088h256v-128h1792z"/>
+  <text
+     style="font-size:770px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="2100"
+     y="685.01953"
+     id="text3036">docforever</text>
+  <text
+     style="font-size:360px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="2100"
+     y="1192.5004"
+     id="text3038"
+     >Protect yourself</text>
+</svg>
+
+
+</div><div id="idRightBar" class="col-xs-11 col-sm-14 bgMainBar"><button id="idCollButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"><div id="idCollBars" class="bgBars"><span class="sr-only">Toggle navigation</span><span class="icon-bar bgIconBar"></span><span class="icon-bar bgIconBar"></span><span class="icon-bar bgIconBar"></span></div><div id="idCollX" style="display:none">❌</div></button><div id="idCollMenu" class="navbar-collapse collapse"><ul class="nav navbar-nav navbar-right"><li class="liNavEl"><a class="navEl navElSelected" href="/">PROVE</a></li><li class="liNavEl"><a class="navEl" href="/docs">FAQ</a></li><li class="liNavEl"><a class="navEl" href="/contact">CONTACT</a></li></ul></div></div></div></div>
+
+<div id="idContainerTop">
+</div>
+<div id="idContFile" style="display:none;">
+	<div id="idContainer2" class="colorGlob">
+		  <div id="import-drop-target" class="bs-dropzone">
+		    <div class="import-header">
+		      <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+		    </div>
+		    
+		    <p class="lead">Prove the existence of your documents for free in the Bitcoin Blockchain.</p>
+		    <!--  p class="lead">Free proof of existence for your documents in the Bitcoin Blockchain.</p -->
+		    <div id="upContainer" style="visibility:hidden">
+		    <p>Drag and drop here, or <label id="import-manual-trigger" class="btn-link colorBtnLink">manually upload<input type="file" id="import-file-select" class="hidden"></label>.</p>
+		    </div>
+		    <p>The file will NOT be uploaded. The cryptographic proof is calculated client-side</p>
+  		 </div>
+	</div>	
+</div>
+
+
+<div id="idContHash" class="container-fluid" style="display:none;">
+	<div class="row">
+		<div id="idContHashInfo" class="col-lg-offset-5 col-lg-14 colorGlob">
+			<div class="cTable">
+				<div class="cTableRow">
+					<div class="cTableCell">
+						File:
+					</div>
+					<div class="cTableCell"><div id="hName" class="cML"></div></div>
+				</div>
+				<div class="cTableRow">
+					<div class="cTableCell">
+						Type:
+					</div>
+					<div class="cTableCell"><div id="hType" class="cML"></div></div>
+				</div>
+				<div class="cTableRow">
+					<div class="cTableCell">
+						Size:
+					</div>
+					<div class="cTableCell"><div id="hSize" class="cML"></div></div>
+				</div>
+				<div class="cTableRow">
+					<div class="cTableCell cNoWrap">
+						Last modified:
+					</div>
+					<div class="cTableCell"><div id="hLM" class="cML"></div></div>
+				</div>
+				<div class="cTableRow">
+					<div id="hValDesc" class="cTableCell cNoWrap">
+					</div>
+					<div class="cTableCell"><div id="hVal" class="cML"></div></div>
+				</div>
+			</div>
+			
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<div class="row">
+		<div id="idContHashCheckExistence" class="col-lg-offset-5 col-lg-14 colorGlob" style="margin-top:15px;display:none;">
+		Checking for existence <i class="glyphicon glyphicon-refresh glyphicon-spin"></i>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div id="idContHashNew" class="col-lg-offset-5 col-lg-14" style="display:none">
+			<div id="idContHashNew" class="bgSec colorSec cHN1" style="border-radius:15px;padding:10px;margin-top:10px;">
+			The hash <span id="docHash"></span> that represents your document has been received by our servers at <span id="timeReceived"></span> UTC. Its proof of existence will be broadcast to the Bitcoin network today, <span id="today1"></span>, at 23:59:59 UTC.
+			</div>
+			<div class="alert alert-danger cAlert" role="alert">
+				<p>It is your responsibility to keep your document safe and unmodified.</p>
+				<p>It is also your responsibility to come back to docforever.com and download the Bitcoin-Merkle file for your document.</p>
+				<p>To stay within storage quotas, our servers will only retain the hash of your document and its associated Bitcoin-Merkle file for seven days after the proof of existence has been broadcast to the Bitcoin network.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div id="idContHashWaitingForBroadcast" class="col-lg-offset-5 col-lg-14" style="display:none">
+			<div class="bgSec colorSec cWFB1">
+				<p>The hash <span id="docHash"></span> that represents your document was received by our servers on <span id="dateReceived1"></span> UTC. Its proof of existence will be broadcast to the Bitcoin network today, <span id="today2"></span>, at 23:59:59 UTC.</p> 
+			</div>
+			<div class="alert alert-danger cWFB2" role="alert">
+				<p>It is your responsibility to keep your document safe and unmodified.</p>
+				<p>It is also your responsibility to come back to docforever.com and download the Bitcoin-Merkle file for your document.</p>
+				<p>To stay within storage quotas, our servers will only retain the hash of your document and its associated Bitcoin-Merkle file for seven days after the proof of existence has been broadcast to the Bitcoin network.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div id="idContHashAlreadyBroadcast" style="display:none;" class="col-lg-offset-5 col-lg-14">
+			<!--  p>The proof of existence for your document with hash <span id="docHash"></span> was broadcast on the Bitcoin network on <span id="dateReceived2"></span></p -->
+			<div class="bgSec colorSec cAB">
+				<div class="bold">Well done!</div> 
+				<p>You can now prove the existence of your document by accessing the Bitcoin Blockchain.</p>
+				<p><a id="webTxid2" class="colorLink" href="#" target="_blank">https://blocktrail.com/tx/</a></p>
+	
+				<div>It is also mandatory that:</div>
+	  			<ul>
+	  			<li>You keep your document safe and unmodified</li> 
+	  			<li>You <a id="merkleJson" class="colorLink" href="#">download the Bitcoin-Merkle file</a> and store it safely.</li>
+	  			</ul>
+			</div>
+			<div class="colorGlob mt15">
+			If you don't trust the validity of the proof, you can check it manually for yourself. 
+			</div>
+			<div>
+			<a id="showMe" class="colorLink" href="#">Show me!</a>
+			</div>
+			
+			<div id="explainShowMe" class="colorGlob" style="display:none;">
+				<!--  div>Steps to manually check the proof of existence for your document with SHA256 hash <span id="self"></span> in a Linux machine.</div -->
+				<div>
+					<h4 class="colorGlob bMt0">SHA256: <span id="self"></span></h4>
+					<h4 class="colorGlob bMt0">Steps for manual verification in a Linux machine</h4>
+				</div>
+				<ol>
+					<li>Check that you have correctly stored the Bitcoin-Merkle file. This is the content of the Bitcoin-Merkle file for your document:
+						<div class="scrSep"><pre id="merkleChain" class="bRadius"></pre></div>
+					</li>
+					<li>Run this script to verifiy the SHA256 hash of you document matches the SELF entry in the Merkle chain.
+						<div class="scrSep"><pre id="bashScript1" class="bRadius"></pre></div>
+					</li>
+					<li>Run this script to verify there is a valid Merkle chain from your document hash to the Merkle root.
+						<div class="scrSep"><pre id="bashScript2" class="bRadius"></pre></div>
+					</li>
+					<li>Run this script to verify the Merkle root is associated to the transaction with txid as broadcast to the Bitcoin Blockchain.
+						<div class="scrSep"><pre id="bashScript3" class="bRadius"></pre></div>
+					</li>
+					<li>Finally, visually verify the date and number of confirmations of the Bitcoin transaction in your browser.
+						<div class="explorer"><a id="webTxid" class="colorLink" href="https://www.blocktrail.com/BTC/tx/" target="_blank">https://www.blocktrail.com/BTC/tx/0123456789abcdef</a></div>
+					</li>
+					
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="idContError" class="container-fluid" style="display:none">
+	<div class="row">
+		<div id="idErrorMessage" class="col-lg-offset-5 col-lg-14 colorGlob bgErr errMsg">
+		</div>
+	</div>
+
+</div>
+
+<div>
+<div style="text-align:center;">No warranty</div>
+<div style="text-align:center;"><a href="https://github.com/udala/docforever" target="_blank">https://github.com/udala/docforever</a></div>
+</div>
+
+<script>
+(function(){
+	
+	function sayswho(){
+        var ua= navigator.userAgent, tem,
+        M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+        if(/trident/i.test(M[1])){
+            tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+            return 'IE '+(tem[1] || '');
+        }
+        if(M[1]=== 'Chrome'){
+            tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+            if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+        }
+        M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+        if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+        return M.join(' ');
+    }
+	
+	var agentComplete=sayswho(),
+	agent=agentComplete.substr(0,agentComplete.indexOf(' '));
+	
+	if (agent=='Safari'){
+		document.getElementById("upContainer").innerHTML='<p>Drag and drop here, or <input type="file" id="import-file-select" style="display:inline-block"></p>';											
+	}
+}());
+
+</script>
+
+<script type="text/javascript" src="/static/javascripts/jquery-dpr-wrap.1.11.1-min.js"></script>
+<script type="text/javascript" src="/static/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/javascripts/cryptoProofOfExistence.js"></script>
+<script type="text/javascript" src="/static/javascripts/FileSaver.js"></script>
+<script type="text/javascript" src="/static/javascripts/level0.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,42 @@
+application: docforever
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+default_expiration: "30m"
+
+# Order is important
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /
+  mime_type: text/html
+  static_files: static/html/level0.html
+  upload: static/html/level0.html
+
+# Cron job. See cron.yaml
+- url: /api/broadcast/daily
+  script: main.app
+  login: admin
+
+- url: /api/.+
+  script: main.app
+
+- url: /(level0|docs|contact)
+  mime_type: text/html
+  static_files: static/html/\1.html
+  upload: static/html/(.+)
+
+- url: /admin/.*
+  script: google.appengine.ext.admin.application
+  login: admin
+  
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
+
+- name: pycrypto
+  version: "latest"

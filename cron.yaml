@@ -1,0 +1,5 @@
+cron:
+- description: daily broadcast
+  url: /api/broadcast/daily
+  schedule: every day 00:00
+

@@ -1,0 +1,159 @@
+.bs-dropzone {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px dashed #eee;
+    border-radius: 4px;
+}
+
+#import-manual-trigger {
+    cursor: pointer;
+}
+
+.navElSelected {
+    text-decoration: none;
+    background-color: #eee;
+}
+.navEl {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    color:#000;
+}
+
+@media (min-width: 768px) {
+	.liNavEl:first-child {
+	    border-left: #CCC solid 1px;
+	}
+		
+	.liNavEl {
+	    border-right: #CCC solid 1px; 
+	}
+}
+
+.bgGlob{
+	/* Original background-color:#232f3e; */
+	background-color:#white;
+}
+.colorGlob{
+	/* Original color:#ccc; */
+	color:#232f3e;
+}
+.bgSec{
+	/* Original background-color:#ccc; */
+	background-color:#e2e4e9;
+}
+.colorSec{
+	color:#232f3e;
+}
+.bgMainBar{
+	/* Original background-color:#767e9c; */
+	background-color:#969ebc;
+}
+
+.bgBars{
+	background-color:white;
+}
+.bgIconBar{
+	background-color:black;
+	height:3px;
+}
+.bgErr{
+	background-color:#ff8683;
+}
+.colorLink{
+	color:#337ab7;
+}
+.colorBtnLink{
+	color:#48a3c6;
+}
+#import-drop-target{
+	border-color:black;
+}
+
+.cDfBar{
+	left: 0px;
+}
+.cLeftBar{
+	line-height:normal;
+}
+#idCollButton{
+	margin-top:0px;
+	margin-bottom:4px;
+	position:relative;
+	top:4px;
+}
+#idCollMenu{
+	clear: both;
+}
+#idContFile{
+	position:relative;
+}
+#idContHash{
+	margin-top:30px;
+}
+
+.cTable{
+	display:table;
+}
+.cTableRow{
+	display:table-row;
+}
+.cTableCell{
+	display:table-cell;
+}
+.cNoWrap{
+	white-space:nowrap;
+}
+.cML{
+	margin-left:7px;
+}
+.cAlert{
+	border-radius:15px;
+	margin-top:10px;
+}
+.cWFB1, .cHN1{
+	border-radius:15px;
+	margin-top:10px;
+	padding:10px;
+}
+.cWFB2{
+	border-radius:15px;
+	margin-top:10px;
+}
+#idContHashAlreadyBroadcast{
+	margin-top:10px;
+}
+.cAB{
+	border-radius:15px;
+	padding:10px;
+}
+.bold{
+	font-weight:bold;
+}
+.mt15{
+	margin-top:15px;
+}
+.bMt0{
+font-weight:bold;
+margin-bottom:0px;
+}
+.scrSep{
+	margin-top:7px;
+	margin-bottom:25px;
+}
+.bRadius{
+	border-radius:15px;
+}
+.explorer{
+	margin-top:7px;
+	margin-bottom:25px;
+}
+.errMsg{
+	margin-top:10px;
+}
+#showMe{
+	font-weight: bold;
+	font-size: 16px;
+}
