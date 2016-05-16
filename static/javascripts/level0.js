@@ -194,7 +194,7 @@ $(function() {
 		if (arrLength<2){
 			console.error('Fatal error. Impossible situation. Merkle chain length less than 2');
 		} else {
-			var str1_1='self='+self+'\nif [ $(sha256sum "'+fileName+'" | head -c 64) == $self ]; then printf "\nOK. Hash MATCHES document\n"; else printf "\nERROR. Hash DOES NOT MATCH document\n"; fi';
+			var str1_1='#!/bin/bash\nself='+self+'\nif [ $(sha256sum "'+fileName+'" | head -c 64) == $self ]; then printf "\nOK. Hash MATCHES document\n"; else printf "\nERROR. Hash DOES NOT MATCH document\n"; fi';
 			$('#bashScript1').text(str1_1);
 			$('#self').text(self);
 			
@@ -218,7 +218,7 @@ $(function() {
 			var url='https://www.blocktrail.com/BTC/tx/'+txid;
 			$('#webTxid').attr('href', url).text(url);
 			
-			var str1='root='+rootHash,
+			var str1='#!/bin/bash\nroot='+rootHash,
 				str2='rootBitcoin=$(curl "https://api.blocktrail.com/v1/btc/transaction/'+txid+'?api_key=MY_APIKEY" | grep -Po \'"script":.*?[^\\\\]",\' | grep -Po \'".*?"\' | tail -1 | sed \'s/"//g\' | tr -d [:space:] | tail -c 64)',
 				str3='if [ $rootBitcoin == $root ]; then printf "\\nOK\\n"; else printf "\\nERROR\\n"; fi ',
 				strFinal=str1+'\n'+str2+'\n\n'+str3+'\n';
